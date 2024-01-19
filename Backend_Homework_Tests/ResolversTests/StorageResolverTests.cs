@@ -1,6 +1,6 @@
-using Backend_Homework.Contracts;
-using Backend_Homework.Enums;
-using Backend_Homework.Storages;
+using Backend_Homework.Storages.Contracts;
+using Backend_Homework.Storages.Enums;
+using Backend_Homework.Storages.Implementation;
 using Backend_Homework_Tests.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;

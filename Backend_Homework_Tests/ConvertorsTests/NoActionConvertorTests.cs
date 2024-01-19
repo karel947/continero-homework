@@ -1,6 +1,6 @@
 using System.Xml.Linq;
-using Backend_Homework.Convertors;
-using Backend_Homework.Extensions;
+using Backend_Homework.Common.Extensions;
+using Backend_Homework.Convertors.Implementation;
 using Backend_Homework_Tests.SampleData;
 using Xunit;
 

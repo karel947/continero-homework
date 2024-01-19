@@ -1,20 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.9.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Backend_Homework.FileManager\Backend_Homework.FileManager.csproj" />
-    <ProjectReference Include="..\Backend_Homework\Backend_Homework.FileManager.csproj" />
+    <ProjectReference Include="..\Backend_Homework.Common\Backend_Homework.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
-using Backend_Homework.Extensions;
-using Backend_Homework.Storages;
+using Backend_Homework.Common.Extensions;
+using Backend_Homework.Storages.Implementation;
 using Backend_Homework_Tests.Helpers;
 using Backend_Homework_Tests.SampleData;
 using Xunit;
@@ -22,7 +22,7 @@ public class FileSystemStorageTests
         await FileSystemStorage.SaveFileAsync(outputFilePath, sampleText.ToStream());
 
         // Assert
-        Assert.Equal(await File.ReadAllTextAsync(outputFilePath), sampleText);
+        Assert.Equal(sampleText, await File.ReadAllTextAsync(outputFilePath));
     }
 
     [Fact]

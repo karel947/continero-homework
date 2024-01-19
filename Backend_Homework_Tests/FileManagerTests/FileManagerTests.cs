@@ -1,7 +1,8 @@
 using System.Xml.Linq;
-using Backend_Homework.Contracts;
-using Backend_Homework.Enums;
-using Backend_Homework.FileManger;
+using Backend_Homework.Convertors.Enums;
+using Backend_Homework.FileManager.Contracts;
+using Backend_Homework.FileManager.Implementation;
+using Backend_Homework.Storages.Enums;
 using Backend_Homework_Tests.Helpers;
 using Backend_Homework_Tests.SampleData;
 using Microsoft.Extensions.DependencyInjection;

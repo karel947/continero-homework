@@ -1,6 +1,6 @@
-﻿using Backend_Homework.Contracts;
-using Backend_Homework.Extensions;
-using Backend_Homework.FileManger;
+﻿using Backend_Homework.FileManager.Contracts;
+using Backend_Homework.FileManager.Extensions;
+using Backend_Homework.FileManager.Implementation;
 using Backend_Homework.UI.Options;
 using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +13,7 @@ public static class Program
     {
         // Service provider
         var serviceProvider = new ServiceCollection()
-            .SetServiceCollection()
+            .AddFileManager()
             .BuildServiceProvider();
 
         // Options parser

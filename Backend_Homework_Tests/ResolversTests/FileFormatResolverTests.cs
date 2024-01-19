@@ -1,5 +1,5 @@
-using Backend_Homework.Contracts;
-using Backend_Homework.Enums;
+using Backend_Homework.Convertors.Enums;
+using Backend_Homework.FileManager.Contracts;
 using Backend_Homework_Tests.Helpers;
 using Backend_Homework_Tests.SampleData;
 using Microsoft.Extensions.DependencyInjection;
