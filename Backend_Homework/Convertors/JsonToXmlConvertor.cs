@@ -21,7 +21,7 @@ public class JsonToXmlConvertor : IConvertor
             var xml = JsonConvert.DeserializeXNode(text)!.ToString(SaveOptions.DisableFormatting);
             return xml.ToStream();
         }
-        catch (Exception ex) when (ex is NullReferenceException || ex is JsonReaderException)
+        catch (Exception ex) when (ex is NullReferenceException or JsonReaderException)
         {
             throw new ArgumentException($"Provided file is not valid {FromFormat}", ex);
         }

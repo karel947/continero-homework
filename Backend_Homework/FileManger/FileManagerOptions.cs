@@ -6,7 +6,7 @@ public class FileManagerOptions
 {
     public string InputPath { get; set; } = null!;
 
-    public string OutputPath { get; set; } = null!;
+    public string? OutputPath { get; set; } = null!;
 
     public Format? InputFormat { get; set; }
 

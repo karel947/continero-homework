@@ -1,7 +1,7 @@
 ﻿using Backend_Homework.Enums;
 using CommandLine;
 
-namespace Backend_Homework.UI;
+namespace Backend_Homework.UI.Options;
 
 public class CommandLineOptions
 {

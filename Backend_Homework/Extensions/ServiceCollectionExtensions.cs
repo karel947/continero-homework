@@ -15,8 +15,8 @@ public static class ServiceCollectionExtensions
             .AddSingleton<IStorageResolver, StorageResolver>()
             .AddSingleton<IConvertorResolver, ConvertorResolver>()
             .AddSingleton<IFileFormatResolver, FileFormatResolver>()
-            .AddAllOfType<IStorage>(typeof(Program))
-            .AddAllOfType<IConvertor>(typeof(Program));
+            .AddAllOfType<IStorage>(typeof(ServiceCollectionExtensions))
+            .AddAllOfType<IConvertor>(typeof(ServiceCollectionExtensions));
     }
 
     private static IServiceCollection AddAllOfType<T>(this IServiceCollection services, Type inAssembly)
@@ -25,7 +25,7 @@ public static class ServiceCollectionExtensions
         var classTypes = inAssembly
             .Assembly
             .GetTypes()
-            .Where(x => !x.IsAbstract && x.IsClass && x.GetInterface(type.Name) != null);
+            .Where(x => x is { IsAbstract: false, IsClass: true } && x.GetInterface(type.Name) != null);
 
         foreach (var classType in classTypes)
         {
